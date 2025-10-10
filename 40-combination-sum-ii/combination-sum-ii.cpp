@@ -5,7 +5,8 @@ private:
     if(target== 0){
         answer.push_back(curr_arr);
         return;
-    } 
+    }
+    // check for a unique value in a array if there it is then skip the current index because me need a unique set of elements that will equal to the target
     for(int i =index; i<candidates.size();i++){
         if( i>index &&candidates[i] == candidates[i-1])
         continue;
