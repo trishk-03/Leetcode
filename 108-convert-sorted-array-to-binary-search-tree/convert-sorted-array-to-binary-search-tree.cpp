@@ -11,7 +11,7 @@
  */
 class Solution {
 private:
-    TreeNode* bst(vector<int> &v, int l , int r){
+    TreeNode* bst(vector<int> v, int l , int r){
         if(l>r)  return nullptr;
         int mid = l +(r-l)/2;
         TreeNode* root = new TreeNode(v[mid]);
