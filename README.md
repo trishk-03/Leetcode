@@ -1,1 +1,1 @@
-Daily LeetCode grind | C++ solutions
+LeetCode grind | C++ solutions
