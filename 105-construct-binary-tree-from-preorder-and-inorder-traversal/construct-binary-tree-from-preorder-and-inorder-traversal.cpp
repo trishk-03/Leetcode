@@ -24,10 +24,9 @@ private:
     TreeNode* buildTree(vector<int> & preorder, vector<int> &inorder , int &preindex,int start, int end){
       if(start> end) return nullptr;
 
-      int curr = preorder[preindex];
-      preindex ++;
-    
-
+      int curr = preorder[preindex++];
+      //   preindex ++; (post increment )
+      
       TreeNode* root = new TreeNode(curr);
 
       if(start == end) return root;
