@@ -17,6 +17,9 @@ private:
         root->left = delete_node(root->left, target);
         root->right = delete_node(root->right, target);
         if(root->left == nullptr && root->right == nullptr && root->val == target){
+            // TreeNode* temp = root;
+            // root = nullptr;
+            // delete temp; -> just unlinking it because leetcode frees it automaticlly we dont need to delete it manually
             return nullptr;
         }
          return root;
