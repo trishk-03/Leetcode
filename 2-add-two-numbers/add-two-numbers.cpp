@@ -11,20 +11,22 @@
 
 class Solution {
 private:
-    ListNode* reverse(ListNode* head) {
-        ListNode* prev = nullptr;
-        ListNode* curr = head;
-        ListNode* next = nullptr;
 
-        while (curr != nullptr) {
-            next = curr->next;
-            curr->next = prev;
-            prev = curr;
-            curr = next;
-        }
 
-        return prev;
-    }
+    // ListNode* reverse(ListNode* head) {
+    //     ListNode* prev = nullptr;
+    //     ListNode* curr = head;
+    //     ListNode* next = nullptr;
+
+    //     while (curr != nullptr) {
+    //         next = curr->next;
+    //         curr->next = prev;
+    //         prev = curr;
+    //         curr = next;
+    //     }
+
+    //     return prev;
+    // }
 
     void insertAtTail(ListNode*& head, ListNode*& tail, int val) {
         ListNode* newNode = new ListNode(val);
@@ -39,7 +41,8 @@ private:
 
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        // l1 = reverse(l1);
+        // not need to reverse because they are already reversed
+        // l1 = reverse(l1); 
         // l2 = reverse(l2);
 
         int carry = 0;
