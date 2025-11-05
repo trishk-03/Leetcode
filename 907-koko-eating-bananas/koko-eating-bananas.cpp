@@ -10,8 +10,8 @@ private:
     long long total(vector<int> & piles ,int mid){
         long long total_hours=0;
         for(int i =0;i<piles.size();i++){
-            // total_hours += ceil((double)piles[i]/mid);
-            total_hours +=(piles[i] + mid - 1) / mid;
+            total_hours += ceil((double)piles[i]/mid);
+            // total_hours +=(piles[i] + mid - 1) / mid;
         }
         return total_hours;
     }
