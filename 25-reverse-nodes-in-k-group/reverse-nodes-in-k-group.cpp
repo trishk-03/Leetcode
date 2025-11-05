@@ -11,7 +11,7 @@
 class Solution {
 private:
    ListNode* kthNode(ListNode* temp, int k){
-    k--; // 1 index 
+    k--;  
     while(temp!=nullptr && k>0){
         temp = temp->next;
         k--;
