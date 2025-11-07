@@ -13,15 +13,15 @@ public:
                 sum -= (nums[l] % 2);
                 l++;
             }
-
+            // when exactly k odds , count how many windows start here
             if (sum == k) {
                 int temp = l;
-              
+                // count leading even numbers
                 while (temp <= r && nums[temp] % 2 == 0) {
                     count++;
                     temp++;
                 }
-
+                // count the window itself
                 count++;
             }
         }
