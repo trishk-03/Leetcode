@@ -14,7 +14,12 @@ private:
     void dfs(TreeNode* root, int &ans, int m){
         if(root == nullptr) return;
         // if(root->val < m) return;
-
+        /*
+        dont return early because if you will return early if the next noode is not greater 
+        than it previous one then there might be a chance that the other node can be greater
+        than the m so we should explore all the paths to check whether there is any node
+        greater or equal to the node from the paths which we are coming
+        */
         if(root->val >= m) ans++;
         m = max(root->val,m);
         dfs(root->left, ans, m);
