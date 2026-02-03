@@ -2,13 +2,11 @@ class Solution {
 private:
    void dfs(int node ,vector<int>& visited, vector<vector<int>>& adj){
     
-    if(visited[node] == 0){
-        visited[node]++;
+        visited[node] =1;
 
         for(int neighbour :adj[node]){
             if(!visited[neighbour]){
             dfs(neighbour,visited,adj);
-        }
         }
     }
    }
@@ -22,7 +20,6 @@ public:
             for(int j =0;j<v;j++){
                 if(i!=j && isConnected[i][j]== 1){
                     adj[i].push_back(j);
-                    adj[j].push_back(i);
                 }
             }
         }
