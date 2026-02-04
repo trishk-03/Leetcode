@@ -9,7 +9,7 @@ public:
        //making visited array
         vector<vector<int>> visited(m, vector<int>(n, 0));
          
-       int count =0;
+       int fresh_count =0;
        // pushing rotten oranges
        for(int i =0;i<m;i++){
         for(int j =0;j<n;j++){
@@ -18,7 +18,7 @@ public:
               visited[i][j]=1;
             }
             if(grid[i][j]==1)
-            count ++;
+            fresh_count ++;
         }
        }
 
@@ -50,7 +50,7 @@ public:
             }
          }
         }
-       if(count != rotten_count) return -1;
+       if(fresh_count != rotten_count) return -1;
        return time;
     }
 };
