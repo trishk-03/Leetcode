@@ -9,7 +9,9 @@ public:
 
         for (char c : s) {
             rows[currRow-1] += c;
-
+            // agar ikdum start pr ho toh mtlb neeche jaayenge toh add krdo
+            // ikdum neeche row pr aagye toh ab upar jaaoge toh ab -1 krdenge
+            // ab har row ki string me char add krdo 
             if (currRow == 1)
                 goingDown = true;
             else if (currRow == numRows)
