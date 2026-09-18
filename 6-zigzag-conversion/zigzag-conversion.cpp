@@ -4,15 +4,15 @@ public:
         if (numRows == 1 || numRows >= s.length())
          return s;
         vector<string> rows(numRows);
-        int currRow = 0;
+        int currRow = 1;
         bool goingDown = true;
 
         for (char c : s) {
-            rows[currRow] += c;
+            rows[currRow-1] += c;
 
-            if (currRow == 0)
+            if (currRow == 1)
                 goingDown = true;
-            else if (currRow == numRows - 1)
+            else if (currRow == numRows)
                 goingDown = false;
 
             currRow += goingDown ? 1 : -1;
